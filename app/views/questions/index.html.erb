@@ -1,0 +1,37 @@
+<%= link_to 'Home', root_path %>
+<%= form_for :question, :url => print_que_ans_questions_path, :remote => true do %>
+
+  <table>
+    <th>
+      Question
+    </th>
+
+    <th>
+      Status
+    </th>
+
+    <th>
+      Level
+    </th>
+
+    <th>
+      Image	
+    </th>
+
+    <th>
+      <%= check_box_tag :question_all %>
+    </th>
+    <%= render(:partial => "question", :collection => @questions, :locals => { :index => true }) || "There's no questions to be displayed." %>
+    <tr>
+      <td>
+  	    <%= submit_tag 'Submit' %>
+      </td>
+      <td>        
+        <input type="reset" value="Reset">
+      </td>      
+    </tr>
+<% end %>
+
+</table>
+
+<%= will_paginate @questions %>

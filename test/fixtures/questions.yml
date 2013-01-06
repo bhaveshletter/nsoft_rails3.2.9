@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  info: 
+  image: 
+  status: 
+  level: 1
+
+two:
+  info: 
+  image: 
+  status: 
+  level: 1

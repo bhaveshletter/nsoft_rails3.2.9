@@ -1,0 +1,38 @@
+  <tr>
+    <td>
+  	  <%= question.info %>
+    </td>	
+ 
+    <td>
+      <%= question.status %>
+    </td>
+
+    <td>
+  	  <%= question.level %>
+    </td>
+
+    <td>
+      <%= image_tag question.image %>
+    </td>
+    <% if index %>
+      <td>
+        <%= check_box_tag "question_ids[]", question.id %>
+      </td> 
+    <% else %>  
+      <table>
+        <th>
+          Answer
+        </th> 
+ 
+        <th>
+          Correct?
+        </th>
+
+        <th>
+          Image
+        </th>
+        <%= render(:partial => 'question_answer', :collection => question.question_answers)  || 'There is no answers to be displayed.' %>
+      </table>
+    <% end %>
+  </tr>  
+  

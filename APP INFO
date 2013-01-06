@@ -1,0 +1,6 @@
+Rails 3.2.9
+Ruby 1.9.3
+Ubuntu 12.04LTS
+
+bundle install
+rake db:setup

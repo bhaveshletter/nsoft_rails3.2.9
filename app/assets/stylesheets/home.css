@@ -1,0 +1,33 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+/* Dispay portion after body tag*/
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+h1.align { text-align: center; }
+
+/* For popup */
+.print_popup {
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+    display: none;
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.8;
+}

@@ -1,0 +1,7 @@
+printPopup=window.open('','print popup', "scrollbars=1, height=500, width=450");
+var temp = printPopup.document;
+temp.write("<html><head><title>Neosoft329 print question answer</title>");
+temp.write("<link rel='stylesheet' href='/assets/home.css'>");
+temp.write("</head><body><div id='container'><%= escape_javascript(render(:partial => 'question', :collection => @questions, :locals => { :index => false }) || 'There is no questions to be displayed.') %> <%= escape_javascript(render :partial => 'shared/print_close') %>");
+temp.write('</div></body></html>');
+temp.close();
